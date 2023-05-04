@@ -1,12 +1,15 @@
 .pictures-container{
     overflow-y: auto;
+    width: 90vw;
+    margin: -30px;
     /* padding: 30px; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     flex: auto;
     /* height: 100vh; */
+    border: 2px solid #60564a;
   }
 
   .pic-card{
@@ -18,13 +21,13 @@
     flex: auto;
     max-width: 750px;
     border: 2px solid #60564a;
-    /* margin: 10px; */
-    color: #3f3942;
+    margin: -30px;
+    /* color: #3f3942; */
     /* padding: 10px; */
     background-color: rgb(165, 176, 164, 0.2);
   }
 
-  img{
+  #pic{
     object-fit: cover;
     height: 100%;
     width: 100%;
