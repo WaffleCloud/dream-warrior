@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
+import Intro from './components/Intro'
 import Bio from './components/Bio';
 import Gallery from './components/Gallery'
 import Contact from './components/Contact';
-import main from './main.jpg';
+
+// import main from './main.jpg';
+
 
 //!splash pictures!
 // import shift from './splash-img/shift.jpg';
@@ -25,7 +28,7 @@ import main from './main.jpg';
 
 //!component!
 
-function App(props) {
+function App() {
 
   //!props!
 //  const pictures = [frontProfile, boStaff, jumpyBoi, streetBattle, zenStatue, spartan, certificate, intenseFace, matrix, casualFull, oceanSquat]; 
@@ -38,50 +41,61 @@ function App(props) {
 
   //!state changes!
 
- const [form, fillForm] = useState('');
- const [gallery, viewGallery] = useState(false);
- const [biography, viewBio] = useState('');
+//  const [form, fillForm] = useState('');
+//  const [gallery, viewGallery] = useState(false);
+//  const [biography, viewBio] = useState('');
 
- //!click handlers!
+//  //!click handlers!
 
- const formClickHandler = () =>{
-  !form ?
-  fillForm('give me your social security # its for science') :
-  fillForm('')
- };
+//  const formClickHandler = () =>{
+//   !form ?
+//   fillForm('give me your social security # its for science') :
+//   fillForm('')
+//  };
 
- const galleryClickHandler = () => {
-  !gallery ?
-  viewGallery(true):
-  viewGallery(false);
- };
+//  const galleryClickHandler = () => {
+//   !gallery ?
+//   viewGallery(true):
+//   viewGallery(false);
+//  };
 
- const bioClickHandler = () => {
-  !biography ?
-  viewBio(bioText):
-  viewBio('');
- };
+//  const bioClickHandler = () => {
+//   !biography ?
+//   viewBio(bioText):
+//   viewBio('');
+//  };
 
   return (
     <div className="container">
 
+
+      {/* INTRO
       <div className="intro"> 
       <h1>Christian Jimenez</h1> 
       <h2>Film Actor - Martial Artist - Voice Actor</h2>
-      </div>
-      {/* <img src={pictures[0]} alt='' />
-      <img src={pictures[1]} alt=''/> */}
-      <div className="main-img-container"><img src={main} className="main-img" alt="main-img" /></div>
-      <div className="card" onClick={bioClickHandler}> <img src={shift} alt="shift" className="splash-img" id="left"/>{biography}<Bio /></div>
-      {/* <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
+      </div> */}
+      
+      {/* MAIN IMAGE
+      <div className="main-img-container"><img src={main} className="main-img" alt="main-img" /></div> */}
+      
+      {/* BIO
+      <div className="card" onClick={bioClickHandler}> <img src={shift} alt="shift" className="splash-img" id="left"/>{biography}<Bio /></div> */}
+      
+      {/* GALLERY
+       <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
         {gallery} 
         <p>Gallery</p>
         { pictures.map(pic => <Gallery pictures = {pic}/>)}
         <img src={look} alt="look" className="splash-img-right" />
       </div> */}
-      <Gallery/>
+
+      {/* CONTACT   
       <div id="resume" className="card" onClick={formClickHandler}><img src={block} alt="block" className="splash-img" id="left"/>{form}<Contact/></div>
-      <div class="contact"></div>
+      <div class="contact"></div> */}
+      <Intro/>
+      <Bio/>
+      <Gallery/>
+      <Contact/>
 
     </div>
   );

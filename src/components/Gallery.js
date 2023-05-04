@@ -1,10 +1,10 @@
 
 import React, {useState} from 'react';
 import './gallery.css';
-import { pictures } from './data.js';
-import { splashPics } from './data.js';
+import { pictures } from '../data.js';
+import { splashPics } from '../data.js';
 
-function Gallery(props){
+function Gallery(){
     const [gallery, setGallery] = useState(false);
 
     const galleryClickHandler = () => {

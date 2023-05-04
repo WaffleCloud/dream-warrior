@@ -1,4 +1,7 @@
 
+//main pic
+import main from './main.jpg'
+
 //gallery pics
 import frontProfile from './gallery/front-profile.jpg';
 import boStaff from './gallery/bo-staff.jpg';
@@ -31,4 +34,6 @@ export const pictures = [
     {image:oceanSquat, alt:'squatting by ocean'}
 ]; 
 
-export const splashPics = [shift, block, look];
+export const splashPics = [{shift: shift}, {block: block}, {look: look}];
+
+export const mainPic = {main: main};
