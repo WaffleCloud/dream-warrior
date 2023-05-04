@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { splashPics } from '../data';
+import BioCard from './BioCard';
 
 function Bio(){
-    let biography = 'this is a bio'
+    let biography = <BioCard/>
+    
 
     const [bio, setBio] = useState('');
 
@@ -12,18 +14,18 @@ function Bio(){
         setBio('');
        };
 
-    let title = 'Bio';
+    let title = 'My Story';
     if(bio){
         title = ''
     }else{
-        title = 'Bio';
-    } 
+        title = 'My Story';
+    };
 
     let content =
     <div className="card" onClick={bioClickHandler}> 
     <img src={splashPics[0]} alt='shift' className="splash-img" id="left"/>
     {title}{bio}
-    </div> ;
+    </div> 
  
     return(
     <section>{content}</section>

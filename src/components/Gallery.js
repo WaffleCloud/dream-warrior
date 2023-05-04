@@ -1,6 +1,6 @@
 
 import React, {useState} from 'react';
-import './gallery.css';
+import '../styleSheets/gallery.css';
 import Picture from './Picture';
 import { splashPics } from '../data.js';
 
@@ -28,7 +28,7 @@ function Gallery(){
         <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
         <Picture/>
         <h3>{option}</h3>
-        <img src={splashPics.look} alt="look" className="splash-img-right" />
+        <img src={splashPics[2]} alt="look" className="splash-img-right" />
       </div>;
       }
    
