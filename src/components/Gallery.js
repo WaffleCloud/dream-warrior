@@ -1,8 +1,9 @@
 
 import React, {useState} from 'react';
 import './gallery.css';
-import { pictures } from '../data.js';
+import Picture from './Picture';
 import { splashPics } from '../data.js';
+
 
 function Gallery(){
     const [gallery, setGallery] = useState(false);
@@ -18,14 +19,14 @@ function Gallery(){
         <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
         <p>Gallery</p>
         <h3>{option}</h3>
-        <img src={splashPics.look} alt="look" className="splash-img-right" />
+        <img src={splashPics[2]} alt="look" className="splash-img-right" />
       </div>;
 
       if(gallery){
-        option = 'close';
+        option = 'Close';
         content =
         <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
-        { pictures.map(pic => <img src={pic.image} alt={pic.alt}/>)}
+        <Picture/>
         <h3>{option}</h3>
         <img src={splashPics.look} alt="look" className="splash-img-right" />
       </div>;

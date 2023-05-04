@@ -21,7 +21,7 @@ function Bio(){
 
     let content =
     <div className="card" onClick={bioClickHandler}> 
-    <img src={splashPics.shift} alt='shift' className="splash-img" id="left"/>
+    <img src={splashPics[0]} alt='shift' className="splash-img" id="left"/>
     {title}{bio}
     </div> ;
  

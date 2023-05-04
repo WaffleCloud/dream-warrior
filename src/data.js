@@ -34,6 +34,6 @@ export const pictures = [
     {image:oceanSquat, alt:'squatting by ocean'}
 ]; 
 
-export const splashPics = [{shift: shift}, {block: block}, {look: look}];
+export const splashPics = [shift, block, {look:look}];
 
 export const mainPic = {main: main};
