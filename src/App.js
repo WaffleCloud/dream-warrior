@@ -28,16 +28,11 @@ import Contact from './components/Contact';
 
 //!component!
 
-function App() {
+function App(props) {
 
   //!props!
 //  const pictures = [frontProfile, boStaff, jumpyBoi, streetBattle, zenStatue, spartan, certificate, intenseFace, matrix, casualFull, oceanSquat]; 
   // {1: boStaff, 2:jumpyBoi, 3:streetBattle, 4:zenStatue, 5:spartan, 6:certificate, 7:intenseFace, 8:matrix, 9:casualFull, 10:oceanSquat}]
-
-  //!variables!
-
-  const bioText = 'this is a bio';
-
 
   //!state changes!
 

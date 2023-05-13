@@ -1,60 +1,54 @@
 
 import React, {useState} from 'react';
 import '../styleSheets/gallery.css';
-import Picture from './Picture';
-import { splashPics } from '../data.js';
+import '../styleSheets/picture.css'
+import '../styleSheets/modal.css'
+import { splashPics } from '../data';
+import Modal from './Modal';
 
 
+        
 function Gallery(){
-    const [gallery, setGallery] = useState(false);
+        
+  const [gallery, setGallery] = useState(false);
+        
+  const galleryClickHandler = () => {
+    setGallery(!gallery);
+  };
 
-    const galleryClickHandler = () => {
-        !gallery ?
-        setGallery(true):
-        setGallery(false);
-       };
-       
-       let option = 'View';
-       let content = 
-        <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
-        <p>Gallery</p>
-        <h3>{option}</h3>
-        <img src={splashPics[2]} alt="look" className="splash-img-right" />
-      </div>;
+let text = 'Gallery';
+let splashImg = <img src={splashPics[2]} alt="look" className="splash-img-right"/>
+if(gallery){
+  text = 'Close'
+  splashImg = ''
+}
+let gallerySplash =
+    <section style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end'
+    }}>
+    <p onClick={galleryClickHandler} className='gallery-text' style={{cursor:'pointer'}}>{text}</p>
+    {splashImg}
+    </section>
 
-      if(gallery){
-        option = 'Close';
-        content =
-        <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
-        <Picture/>
-        <h3>{option}</h3>
-        <img src={splashPics[2]} alt="look" className="splash-img-right" />
-      </div>;
-      }
-   
-    return(
-      <div>{content}{gallery}</div>
-        // <div className='pictures-container'> 
-          
-        //   <div className='pic-card'>
-        //     {/* {props.pictures.map(({src}) => (<img key={src} src={src} alt=''/>))} */}
-        //     {/* {props.pictures[0]} */}
-        //     {/* <img src={props.pictures[0]} alt=''/> */}
-        //     {/* <img src={props.pictures[props.pictures.map(pic => pic)]} alt="" /> */}
-        //     { pictures.map(pic => <Gallery pictures = {pic}/>)}
-        //     {/* <img src={props.pictures} id='pic' alt=''/>  */}
-        //     </div>
-        // </div>
 
-       
-      //   <div className={!gallery ? 'card-center' : 'card-center-active'} onClick={galleryClickHandler}>
-      //   {gallery} 
-      //   <p>Gallery</p>
-      //   { pictures.map(pic => <Gallery pictures = {pic}/>)}
-      //   <img src={look} alt="look" className="splash-img-right" />
-      // </div>
-      
-    )
+// starting content in div
+
+let content = <div className='content'><Modal/></div>
+
+if(!gallery){
+  content = null;
+    }  
+
+return(
+      <div className='gallery-container'>
+      {gallerySplash}{gallery}
+      {content}
+      </div>
+)
 }
 
+
+          
 export default Gallery;

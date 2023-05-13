@@ -60,7 +60,7 @@
   font-weight: bold;
   font-size: 50px;
   padding: 10px;
-  background-color: rgba(18, 131, 8);
+  background-color: rgb(165, 176, 164, 0.2);
 }
 
 .container{
@@ -129,7 +129,6 @@ h2{
   text-align: left;
   border-radius: 90px;
   border: 1px solid #60564a;
-  
  }
 
  .splash-img-right{
@@ -140,3 +139,5 @@ h2{
   border-radius: 90px;
   border: 1px solid #60564a;
  }
+
+
