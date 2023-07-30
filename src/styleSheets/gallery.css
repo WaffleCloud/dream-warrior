@@ -1,0 +1,65 @@
+
+
+.close-gallery{
+  font-family: 'Amatic SC', cursive;
+  color: #3f3942;
+  font-size: 2rem;
+  offset: 5px 5px;
+  cursor: pointer;
+}
+
+
+.gallery-container:hover{
+  cursor: pointer;
+  background-color: rgb(165, 176, 164, 0.8);
+  transition: flex 0.7s ease-in
+}
+
+.gallery-container{
+  height: 30%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: auto;
+  width: 70vw;
+  max-width: 750px;
+  border: 2px solid #60564a;
+  margin: 10px;
+  color: #3f3942;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 50px;
+  padding: 10px;
+  background-color: rgb(165, 176, 164, 0.2);
+}
+
+.pic-container-active{
+  height: 30%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: auto;
+  width: 70vw;
+  max-width: 750px;
+  border: 2px solid #60564a;
+  margin: 10px;
+  color: #3f3942;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 50px;
+  padding: 10px;
+  background-color: rgb(165, 176, 164, 0.2);
+}
+
+.splash-img-right{
+  margin: 10px;
+  margin-left: 30%;
+  height: 30%;
+  width: 30%;
+  border-radius: 90px;
+  border: 1px solid #60564a;
+ }
+
+

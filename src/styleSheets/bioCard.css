@@ -1,0 +1,20 @@
+
+.bio-card{
+    font-family: Ubuntu, sans-serif;
+    font-weight: lighter;
+    color: #524b56;
+    text-align:justify;
+    margin: 0px;
+    padding: 40px;
+    width: auto;
+    max-width: 90%;
+    max-height: 50vh;
+    display:flex;
+    font-size: 1.25rem;
+    border: 1px dotted #60564a;
+    overflow-y: auto; 
+    overflow-x: scroll;
+    content-visibility: auto;
+    background-color: rgb(228,221,195, 0.2);
+    box-shadow: inset 0px 0px 40px 1px rgb(47,50,60, 0.5);
+}
