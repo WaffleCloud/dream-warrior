@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
-import Intro from './src/components/Intro'
-import Bio from './src/components/Bio';
-import Gallery from './src/components/Gallery'
-import Contact from './src/components/Contact';
+import Intro from './components/Intro'
+import Bio from './components/Bio';
+import Gallery from './components/Gallery'
+import Contact from './components/Contact';
 
 // import main from './main.jpg';
 
